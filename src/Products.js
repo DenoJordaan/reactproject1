@@ -12,6 +12,7 @@ class Products extends Component {
 
     getProducts() {
         return [
+
             {
                 imageUrl: "http://loremflickr.com/150/150?random=1",
                 productName: "Product 1",
@@ -45,10 +46,28 @@ class Products extends Component {
 
         return (
             <div>
-                <ul>{listProducts}</ul>
+                {listProducts.length > 0 ? (
+                    <ul>{listProducts}</ul>
+                ) : (
+                    <ul>No Products to display</ul>
+                )}
             </div>
         );
     }
 }
 
 export default Products;
+
+
+/**
+ {listProducts.length > 0 &&
+          <ul>{listProducts}</ul>
+        }
+ {listProducts.length == 0 &&
+          <ul>No Products to display</ul>
+        }
+ <div>
+
+ </div>
+ *
+ */
