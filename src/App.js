@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
-import { Jumbotron, Button } from 'react-bootstrap';
+import UserForm from './UserForm';
 
-class JumboTronComponent extends Component {
-    constructor(props){
-        super(props);
-    }render() {
+class App extends Component {
+    render() {
         return (
             <div>
-                <Jumbotron>
-                    <h1>Hello, world!</h1>
-                    <p>{this.props.children}</p>
-                    <p><Button variant="primary">Learn more</Button></p>
-                </Jumbotron>
+                <UserForm />
+
             </div>
         );
     }
 }
-export default JumboTronComponent;
+
+export default App;
+
+//import Products from './Products';
